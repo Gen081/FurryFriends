@@ -1,5 +1,11 @@
 import React from 'react'
+import 'bootstrap/dist/css/bootstrap.min.css'
 import './App.css'
+import { BrowserRouter, Switch, Route} from 'react-router-dom'
+import NavBar from './components/NavBar'
+import LandingPage from './pages/LandingPage'
+
+
 
 class App extends React.Component {
   state = { serverMessage: '' }
@@ -10,13 +16,16 @@ class App extends React.Component {
       .then(data => this.setState({ serverMessage: data.message }))
   }
 
-  render(){
+  render() {
     return (
-      <div id="demo">
-        <h1>Hello from client/src/App.js</h1>
-        <h1>{this.state.serverMessage}</h1>
-      </div>
+      <BrowserRouter>
+        <NavBar />
+        <Switch>
+        <Route exact path="/" component={LandingPage} />
+        </Switch>
+      </BrowserRouter>
     )
+
   }
 }
 
