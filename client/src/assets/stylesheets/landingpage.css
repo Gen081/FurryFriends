@@ -1,0 +1,26 @@
+.dog-image {
+    width: 1284px;
+    height: 200x;
+}
+
+.center-btn {
+    margin: 0;
+    background: #65a9d7;
+    position: absolute;
+    top: 85%;
+    left: 50%;
+    margin-right: -50%;
+    transform: translate(-50%, -50%); 
+    width: 350px;
+    height: 55px;
+    font-size: 30px;
+}
+
+.about {
+    position: absolute;
+    top: 25%;
+    left: 21%;
+    font-size: 40px;
+    color: white;
+    text-shadow: 4px 4px 10px cornflowerblue;
+}
