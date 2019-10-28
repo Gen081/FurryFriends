@@ -1,8 +1,8 @@
 import React from 'react'
-import Navbar from '../pages/LandingPage'
+import Navbar from './LandingPage'
 
 
-class PageTwo extends React.Component {
+class dogsForAdoption extends React.Component {
     state = {
         id: "",
         species: "",
@@ -62,4 +62,4 @@ class PageTwo extends React.Component {
         )
     }
 }
-export default PageTwo
+export default dogsForAdoption
