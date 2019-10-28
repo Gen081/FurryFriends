@@ -1,3 +1,13 @@
+body {
+    margin: 0;
+    padding: 0;
+}
+
+#root {
+    margin: 0;
+    padding: 0;
+}
+
 button {
     border-top: 1px solid #96d1f8;
     background: #65a9d7;

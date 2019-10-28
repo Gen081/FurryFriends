@@ -1,6 +1,11 @@
+.img-wrapper {
+    width: 100vw;
+}
+
 .dog-image {
-    width: 1284px;
-    height: 200x;
+    width: 100%;
+    height: 100%;
+    background-size: cover;
 }
 
 .center-btn {
