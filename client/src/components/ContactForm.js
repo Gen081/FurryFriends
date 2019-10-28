@@ -32,8 +32,6 @@ const ContactForm = (props) => {
             <label for="your-message">Your Message</label><br></br>
             <textarea id="your-message"
               name="your-message"
-              cols="20"
-              rows="10" 
               className="form-field message-text-area"
               />
           </div>
