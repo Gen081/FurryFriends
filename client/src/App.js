@@ -1,5 +1,5 @@
 import React from 'react'
-import 'bootstrap/dist/css/bootstrap.min.css'
+// import 'bootstrap/dist/css/bootstrap.min.css'
 import './App.css'
 import { BrowserRouter, Switch, Route } from 'react-router-dom'
 import NavBar from './components/NavBar'
@@ -7,6 +7,8 @@ import LandingPage from './pages/LandingPage'
 import Footer from './components/Footer'
 
 
+import PageTwo from './pages/PageTwo'
+import ShowAnimal from './pages/ShowAnimal'
 
 class App extends React.Component {
   state = {}
@@ -16,7 +18,10 @@ class App extends React.Component {
       <BrowserRouter>
         <NavBar />
         <Switch>
-          <Route exact path="/" component={LandingPage} /> 
+
+          <Route exact path="/animals" component={PageTwo} />
+          <Route exact path="/" component={LandingPage} />
+          <Route exact path="/pages/animal" component={ShowAnimal} />
         </Switch>
         <Footer/>
       </BrowserRouter>
