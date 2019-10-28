@@ -5,6 +5,10 @@ import { BrowserRouter, Switch, Route } from 'react-router-dom'
 import NavBar from './components/NavBar'
 import LandingPage from './pages/LandingPage'
 import dogsForAdoption from './pages/dogsForAdoption'
+import Footer from './components/Footer'
+
+
+
 import ShowAnimal from './pages/ShowAnimal'
 
 class App extends React.Component {
@@ -15,10 +19,13 @@ class App extends React.Component {
       <BrowserRouter>
         <NavBar />
         <Switch>
+
           <Route exact path="/animals" component={dogsForAdoption} />
+
           <Route exact path="/" component={LandingPage} />
           <Route exact path="/pages/animal" component={ShowAnimal} />
         </Switch>
+        <Footer/>
       </BrowserRouter>
     )
 
