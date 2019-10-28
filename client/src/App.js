@@ -4,6 +4,7 @@ import './App.css'
 import { BrowserRouter, Switch, Route } from 'react-router-dom'
 import NavBar from './components/NavBar'
 import LandingPage from './pages/LandingPage'
+import Footer from './components/Footer'
 
 
 class App extends React.Component {
@@ -14,8 +15,9 @@ class App extends React.Component {
       <BrowserRouter>
         <NavBar />
         <Switch>
-          <Route exact path="/" component={LandingPage} />
+          <Route exact path="/" component={LandingPage} /> 
         </Switch>
+        <Footer/>
       </BrowserRouter>
     )
 
