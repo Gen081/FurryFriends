@@ -4,7 +4,7 @@ import './App.css'
 import { BrowserRouter, Switch, Route } from 'react-router-dom'
 import NavBar from './components/NavBar'
 import LandingPage from './pages/LandingPage'
-import PageTwo from './pages/PageTwo'
+import dogsForAdoption from './pages/dogsForAdoption'
 
 class App extends React.Component {
   state = {}
@@ -14,7 +14,7 @@ class App extends React.Component {
       <BrowserRouter>
         <NavBar />
         <Switch>
-          <Route exact path="/animals" component={PageTwo} />
+          <Route exact path="/animals" component={dogsForAdoption} />
           <Route exact path="/" component={LandingPage} />
         </Switch>
       </BrowserRouter>

@@ -9,8 +9,9 @@ const LandingPage = () => {
       <img className="dog-image" src={"images/dog.jpg"} alt={"Dog"} />
       <div className="hero-content">
         <a href="/animals"
-          className="center-btn"
-        >Find your Companion!/></a>>
+          className="btn center-btn"
+
+        >Find your Companion!</a>
         <p className="about">Connecting adoptable pets with families.</p>
       </div>
     </div>
