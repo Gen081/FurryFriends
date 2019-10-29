@@ -7,7 +7,7 @@ import dog from '../assets/images/dog.jpg'
 const LandingPage = () => {
 
   const handleClick = () => {
-    window.location = "/animals"
+    window.location = "/dogsForAdoption"
   }
   return (
     <div className="img-wrapper">
@@ -16,7 +16,7 @@ const LandingPage = () => {
         <button onClick={handleClick}
           className="center-btn"
         >Find your Companion!</button>
-        <p className="about">Connecting adoptable pets with families.</p>
+        <p className="about">Connecting adoptable pets with families</p>
       </div>
     </div>
   )
