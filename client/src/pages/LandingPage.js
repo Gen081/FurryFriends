@@ -10,10 +10,14 @@ const LandingPage = () => {
   return (
     <div className="img-wrapper">
       <div className="hero-content">
+        <div className="about">
+        <p>Connecting adoptable pets with families.</p>
+        </div>
+        <div className="center-btn-wrapper">
         <button onClick={handleClick} className="center-btn">
           Find your Companion!
         </button>
-        <p className="about">Connecting adoptable pets with families.</p>
+        </div>
       </div>
     </div>
   );

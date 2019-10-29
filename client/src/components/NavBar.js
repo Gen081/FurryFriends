@@ -14,9 +14,9 @@ const Navbar = () => (
     backgroundSize: `cover`, borderRadius: `5px`, 
     backgroundRepeat: `no-repeat`}}>
     
-      <button>Services</button>
-      <button>Resouces</button>
-      <button>LogIn</button>
+      <button className="nav-btn">Services</button>
+      <button className="nav-btn">Resouces</button>
+      <button className="nav-btn">LogIn</button>
     </div>
   </nav>
 )
