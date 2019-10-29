@@ -40,7 +40,7 @@ bearerToken = async () => {
       accessToken.created_at = new Date()
     })
     .catch(e => console.log(e))
-  console.log('new Token ' + accessToken.token)
+  // console.log('new Token ' + accessToken.token)
   return accessToken.token
 }
 
@@ -50,30 +50,29 @@ app.get('/api/animals', async (request, response) => {
   const token = await bearerToken()
 
   try {
-    const { data } = await axios.get('https://api.petfinder.com/v2/animals', {
+    const { data } = await axios.get('https://api.petfinder.com/v2/animals?type=dog', {
       headers: {
         Authorization: `Bearer ${token}`
       },
       params: request.query
     });
-
+    // console.log(data.animals)
     let animals = data.animals.map(animal => {
       return ({
         id: animal.id,
-        species: animal.species,
-        breed: animal.breed,
+        breed: animal.breeds.primary,
         age: animal.age,
         gender: animal.gender,
-        spayed_neutered: animal.spayed_neutered,
-        house_trained: animal.house_trained,
+        spayed_neutered: animal.attributes.spayed_neutered,
+        house_trained: animal.attributes.house_trained,
         name: animal.name,
-        email: animal.email,
-        phone: animal.phone,
-        street_address: animal.street_address,
-        city: animal.city,
-        state: animal.state,
-        zip_code: animal.zip_code,
-        photos: animal.photos[0]
+        email: animal.contact.email,
+        phone: animal.contact.phone,
+        street_address: animal.contact.address.address1,
+        city: animal.contact.address.city,
+        state: animal.contact.address.state,
+        zip_code: animal.contact.address.zip_code,
+        photo: animal.photos[0]
       })
     })
     response.send(animals);
