@@ -36,18 +36,23 @@ class dogsForAdoption extends React.Component {
             <div className="dogs">
                 {
                     this.state.animals.map(dog => {
-                        return (
-                            <div key={dog.id} className="card">
-                                <img src={dog.photo && dog.photo.large} />
-                                <div class="container">
-                                    <h4><b>{dog.name}</b></h4>
-                                    <p>{dog.state}</p>
+                        if (dog.photo) {
+                            return (
+                                <div key={dog.id} className="card" id={dog.id} >
+                                    <img src={dog.photo && dog.photo.medium} width="300px" alt="Dog" />
+                                    <div class="container">
+                                        <h5>{dog.name}</h5>
+                                        <h6>{dog.breed}</h6>
+                                        <p>{dog.city.mia}</p>
+                                    </div>
                                 </div>
-                            </div>
-                        )
+
+                            )
+                        }
+
                     })
                 }
-            </div>
+            </div >
         )
     }
 
