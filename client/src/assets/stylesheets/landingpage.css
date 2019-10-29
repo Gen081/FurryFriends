@@ -1,25 +1,17 @@
 body {
-   margin: 0;
-   padding: 0;
-   background-color: cornflowerblue;
+  margin: 0;
+  padding: 0;
+  background-color: cornflowerblue;
 }
-
-
 
 .img-wrapper {
   width: 100vw;
 }
 
 .dog-image {
-<<<<<<< HEAD
   width: 100%;
   height: 100%;
   background-size: cover;
-=======
-    width: 100%;                    
-    height: 100%;
-    background-size: cover;
->>>>>>> bad44d0f2447b9608aaf10e7003c38e3c98d7425
 }
 
 .center-btn {

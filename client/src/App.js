@@ -19,17 +19,11 @@ class App extends React.Component {
       <BrowserRouter>
         <NavBar />
         <Switch>
-<<<<<<< HEAD
           <Route exact path="/dogsForAdoption" component={dogsForAdoption} />
-=======
-
-          <Route exact path="/animals" component={dogsForAdoption} />
-
->>>>>>> bad44d0f2447b9608aaf10e7003c38e3c98d7425
           <Route exact path="/" component={LandingPage} />
           <Route exact path="/pages/animal" component={ShowAnimal} />
         </Switch>
-        <Footer/>
+        <Footer />
       </BrowserRouter>
     )
 
