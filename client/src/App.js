@@ -19,13 +19,11 @@ class App extends React.Component {
       <BrowserRouter>
         <NavBar />
         <Switch>
-
-          <Route exact path="/animals" component={dogsForAdoption} />
-
+          <Route exact path="/dogsForAdoption" component={dogsForAdoption} />
           <Route exact path="/" component={LandingPage} />
           <Route exact path="/pages/animal" component={ShowAnimal} />
         </Switch>
-        <Footer/>
+        <Footer />
       </BrowserRouter>
     )
 
