@@ -10,8 +10,10 @@ const Navbar = () => (
       <li><h1>FurryFriendFinder</h1></li>
       <li className="slogan">Adopt a Friendly Companion</li>
     </ul>
-    <div className="btn">
-      <img className="peek" src={Peek} alt={"peek"}/>
+    <div className="btn" style= {{ backgroundImage: `url(${Peek})`, 
+    backgroundSize: `cover`, borderRadius: `5px`, 
+    backgroundRepeat: `no-repeat`}}>
+    
       <button>Services</button>
       <button>Resouces</button>
       <button>LogIn</button>
