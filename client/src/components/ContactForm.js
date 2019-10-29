@@ -5,52 +5,50 @@ import '../assets/stylesheets/ContactForm.css'
 const ContactForm = (props) => {
 
     return(
-      <>
-        <h1>Contact Me!</h1>
+      <div> 
+        <h1 className="form-field header">Contact Me!</h1>
         <form id='ContactForm'action="https://formspree.io/pierrelouisgenny@gmail.com" method="POST">
           <div className="form-input">
-            <label for="your-name">Your Name</label><br></br>
+            <label htmlFor="your-name">Your Name</label>
             <input
               id="your-name"
               type="text"
               name="your-name"
-              autocomplete="off"
+              maxLength="60"
+              autoComplete="off"
               className="form-field name-input"
             />
-          </div>
+          </div>         
+                 
           <div className="form-input">
-            <label for="your-email">Your Email</label><br></br>
+            <label htmlFor="your-email">Your email</label>
             <input 
               id="your-email" 
               type="text"
               name="your-email"
-              autocomplete="off"
+              maxLength="60"
+              autoComplete="off"
               className="form-field email-input"
             />
           </div>
           <div className="form-input">
-            <label for="your-message">Your Message</label><br></br>
+            <label htmlFor="your-message">Your Message</label>
             <textarea id="your-message"
               name="your-message"
-              cols="20"
-              rows="10" 
+              cols="40"
+              rows="10"
               className="form-field message-text-area"
               />
           </div>
           <div className="form-input">
             <button type="submit">Send</button>
-            <input type="reset"/>
+            <button type="reset">Reset</button>
+            {/* <input type="reset"/> */}
           </div>
         </form >
-      </>        
+      </div>        
     )
   }
-
-
-
-          
-          
-          
 
 export default ContactForm
 
