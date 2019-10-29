@@ -10,6 +10,8 @@ nav {
     justify-content: space-between;
     background-color: cornflowerblue;
     border-radius: 1px;
+    width: 100vw;
+    
 }
 
 .paw {
