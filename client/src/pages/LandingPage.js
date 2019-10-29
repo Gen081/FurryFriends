@@ -9,7 +9,6 @@ const LandingPage = () => {
   };
   return (
     <div className="img-wrapper">
-      <img className="dog-image" src={dog} alt={'dog'} />
       <div className="hero-content">
         <button onClick={handleClick} className="center-btn">
           Find your Companion!
