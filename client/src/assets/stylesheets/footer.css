@@ -1,6 +1,10 @@
 footer {
     background-color: cornflowerblue;
     width: 100vw;
-    position: fixed;
+    position: static;
     bottom: 0;
+}
+
+footer > ul {
+    margin: 0;
 }
