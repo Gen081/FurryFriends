@@ -18,7 +18,7 @@ class ShowAnimal extends React.Component {
   };
 
   componentDidMount() {
-    console.log(this.props.match.params);
+    console.log(this.props);
     fetch(`/api/animals/${this.props.match.params.id}`)
       .then(response => response.json())
       //   .then(data => console.log(data));
@@ -56,7 +56,13 @@ class ShowAnimal extends React.Component {
         <div>{this.state.zip}</div>
         <div>{this.state.email}</div>
         <div>{this.state.phone}</div>
-        <div>{this.state.photo}</div>
+        <div>
+          <img
+            src={this.state.photo}
+            alt=""
+          >
+          </img>
+        </div>
 
         <ContactForm />
       </div>
