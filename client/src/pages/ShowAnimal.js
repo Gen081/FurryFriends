@@ -43,20 +43,8 @@ class ShowAnimal extends React.Component {
 
   render() {
     return (
-      <div>
-        <div>{this.state.name}</div>
-        <div>{this.state.age}</div>
-        <div>{this.state.breed}</div>
-        <div>{this.state.color}</div>
-        <div>{this.state.size}</div>
-        <div>{this.state.gender}</div>
-        <div>{this.state.street_address}</div>
-        <div>{this.state.city}</div>
-        <div>{this.state.state}</div>
-        <div>{this.state.zip}</div>
-        <div>{this.state.email}</div>
-        <div>{this.state.phone}</div>
-        <div>
+      <>
+        <div className="dogPicture">
           <img
             src={this.state.photo}
             alt=""
@@ -64,12 +52,24 @@ class ShowAnimal extends React.Component {
           </img>
         </div>
 
-        <ContactForm />
-      </div>
-    );
+        <div>
+          <div>{this.state.name}</div>
+          <div>{this.state.age}</div>
+          <div>{this.state.breed}</div>
+          <div>{this.state.color}</div>
+          <div>{this.state.size}</div>
+          <div>{this.state.gender}</div>
+          <div>{this.state.street_address}</div>
+          <div>{this.state.city}</div>
+          <div>{this.state.state}</div>
+          <div>{this.state.zip}</div>
+          <div>{this.state.email}</div>
+          <div>{this.state.phone}</div>
+          <ContactForm />
+        </div>
+      </>
+    )
   }
 }
 
 export default ShowAnimal;
-
-// this.props.j
