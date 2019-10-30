@@ -31,7 +31,6 @@ class dogsForAdoption extends React.Component {
   }
 
   render() {
-    console.log(this.state.animals);
     const { animals, breed, age, gender } = this.state
     return (
       <>

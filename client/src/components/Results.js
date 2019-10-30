@@ -2,13 +2,31 @@ import React from 'react'
 import { Link } from 'react-router-dom';
 
 const Results = props => {
-    const { animals, breed, age, gender } = props
-    animals = animals.filter(animal => {
+    let { animals, breed, age, gender } = props
+    console.log(animals, gender)
 
-    })
+    if (breed) {
+        animals = animals.filter(animal => {
+            return animal.breed.toLowerCase().includes(breed.toLowerCase())
+        })
+    }
+
+    if (age !== "all") {
+        animals = animals.filter(animal => {
+            return animal.age.toLowerCase().includes(age.toLowerCase())
+        })
+    }
+
+    if (gender !== "all") {
+        animals = animals.filter(animal => {
+            return animal.gender.toLowerCase().includes(gender.toLowerCase())
+        })
+    }
+
+    console.log(animals)
     return (
         <div className="dogs">
-            {props.animals.map(dog => {
+            {animals.map(dog => {
                 if (dog.photo) {
                     return (
                         <div key={dog.id} className="card" id={dog.id}>
