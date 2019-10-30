@@ -16,7 +16,7 @@ const Navbar = () => {
   return (
   <nav>
     <ul>
-      <li><a href="./"><img className="paw" src={Paw} alt={"paw"}/></a></li>
+      <li><a href="/"><img className="paw" src={Paw} alt={"paw"}/></a></li>
       <li className="web-name"><h1>FurryFriendFinder</h1></li>
       <li className="slogan">Adopt a Friendly Companion</li>
     </ul>
