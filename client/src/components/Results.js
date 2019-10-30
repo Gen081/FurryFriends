@@ -2,6 +2,10 @@ import React from 'react'
 import { Link } from 'react-router-dom';
 
 const Results = props => {
+    const { animals, breed, age, gender } = props
+    animals = animals.filter(animal => {
+
+    })
     return (
         <div className="dogs">
             {props.animals.map(dog => {
