@@ -38,6 +38,7 @@ class dogsForAdoption extends React.Component {
                   src={dog.photo && dog.photo.medium}
                   width="300px"
                   alt="Dog"
+                  className="dog-pics"
                 />
                 <div class="container">
                   <h5>{dog.name}</h5>
