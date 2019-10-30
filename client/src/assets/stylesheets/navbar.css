@@ -35,3 +35,8 @@ h1{
     position: absolute;
     left: 78%;
 }
+
+.nav-btn {
+    position: relative;
+    top: 65%;
+}
