@@ -1,5 +1,6 @@
 import React from 'react';
 import ContactForm from '../components/ContactForm';
+import '../assets/stylesheets/showanimal.css'
 
 class ShowAnimal extends React.Component {
   state = {
