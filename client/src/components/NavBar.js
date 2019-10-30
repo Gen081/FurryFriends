@@ -3,10 +3,20 @@ import '../assets/stylesheets/navbar.css'
 import Paw from '../assets/images/paw.png'
 import Peek from '../assets/images/peek.jpg'
 
-const Navbar = () => (
+const Navbar = () => {
+
+      const handleClickAdopt = () => {
+      window.location = '/dogsForAdoption';
+    };
+
+      const handleClickContact =() => {
+        window.location = '/dogs';
+      }
+
+  return (
   <nav>
     <ul>
-      <li><img className="paw" src={Paw} alt={"paw"}/></li>
+      <li><a href="./"><img className="paw" src={Paw} alt={"paw"}/></a></li>
       <li><h1>FurryFriendFinder</h1></li>
       <li className="slogan">Adopt a Friendly Companion</li>
     </ul>
@@ -14,11 +24,11 @@ const Navbar = () => (
     backgroundSize: `cover`, borderRadius: `5px`, 
     backgroundRepeat: `no-repeat`}}>
     
-      <button className="nav-btn">Services</button>
-      <button className="nav-btn">Resouces</button>
+      <button onClick={handleClickAdopt} className="nav-btn">Adopt</button>
+      <button onClick={handleClickContact} className="nav-btn">Contact</button>
       <button className="nav-btn">LogIn</button>
     </div>
   </nav>
-)
+  )}
 
 export default Navbar
