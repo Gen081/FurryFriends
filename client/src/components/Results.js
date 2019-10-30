@@ -1,23 +1,33 @@
 import React from 'react'
+import { Link } from 'react-router-dom';
 
 const Results = props => {
-    <div className="dogFilter">
-        <label htmlFor="dogBreed">Type Dog Breed</label>
-        <input type="text" id="dogBreed" placeholder="Breed" />
-
-        <label htmlFor="dogAge">Age</label>
-        <select id="dogAge">
-            <option value="Baby">Baby</option>
-            <option value="Young">Young</option>
-            <option value="Adult">Adult</option>
-        </select>
-
-        <label htmlFor="dogGender">Gender</label>
-        <select id="dogGender">
-            <option value="Male">Male</option>
-            <option value="Female">Female</option>
-        </select>
-    </div>
+    return (
+        <div className="dogs">
+            {props.animals.map(dog => {
+                if (dog.photo) {
+                    return (
+                        <div key={dog.id} className="card" id={dog.id}>
+                            <img
+                                src={dog.photo && dog.photo.medium}
+                                width="300px"
+                                alt="Dog"
+                                className="dog-pics"
+                            />
+                            <div class="container">
+                                <h5>{dog.name}</h5>
+                                <h6>{dog.breed}</h6>
+                                <p>{dog.city.mia}</p>
+                                <Link to={`/dogs/${dog.id}`}>More Info</Link>
+                            </div>
+                        </div>
+                    );
+                }
+            })}
+        </div>
+    )
 }
+
+
 
 export default Results
