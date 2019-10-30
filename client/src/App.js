@@ -6,6 +6,7 @@ import NavBar from './components/NavBar';
 import LandingPage from './pages/LandingPage';
 import dogsForAdoption from './pages/dogsForAdoption';
 import Footer from './components/Footer';
+//import SocialFollow from './components/SocialFollow';
 
 import ShowAnimal from './pages/ShowAnimal';
 
@@ -22,7 +23,8 @@ class App extends React.Component {
           <Route exact path="/" component={LandingPage} />
           <Route exact path="/pages/animal" component={ShowAnimal} />
         </Switch>
-        <Footer />
+        <Footer/>
+      
       </BrowserRouter>
     );
   }
