@@ -33,3 +33,9 @@
 .dog-pics {
   height: 350px !important;
 }
+
+/* DOG FILTERING */
+
+.dogFilter {
+  display: flex;
+}
