@@ -54,7 +54,7 @@ class ShowAnimal extends React.Component {
         </div>
 
         <div className="dogInfoWrapper">
-          <ul>
+          <ul className="dogInfoUl">
             <li>{this.state.name}</li>
             <li>{this.state.age}</li>
             <li>{this.state.breed}</li>
@@ -68,8 +68,8 @@ class ShowAnimal extends React.Component {
             <li>{this.state.email}</li>
             <li>{this.state.phone}</li>
           </ul>
-          <ContactForm />
         </div>
+        <ContactForm />
       </>
     )
   }

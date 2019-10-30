@@ -1,9 +1,15 @@
-ul {
-    color: black;
-}
 
 .dogPicture {
     display: flex;
     justify-content: center;
     margin-top: 10vh;
+}
+
+.dogInfoWrapper {
+    width: 35vw;
+    margin: 0 auto;
+}
+
+.dogInfoUl {
+    color: black;
 }
