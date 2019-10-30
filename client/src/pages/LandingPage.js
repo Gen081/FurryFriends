@@ -1,7 +1,6 @@
 import React from 'react';
 import '../assets/stylesheets/landingpage.css';
-import dog from '../assets/images/dog.jpg';
-// import PageTwo from './PageTwo'
+
 
 const LandingPage = () => {
   const handleClick = () => {
