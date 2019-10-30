@@ -6,21 +6,6 @@ class dogsForAdoption extends React.Component {
     animals: []
   };
 
-  //     componentDidMount() {
-  //         fetch('/api/animals')
-  //             .then(response => response.json())
-  //             .then(data => console.log(data))
-  //         //for (let i = 0; i < data.length; i++) {
-  //         // console.log(data[i])
-  //         this.setState({
-  //             id: data[i].id,
-  //             age: data[i].age,
-  //             gender: data[i].gender,
-  //             name: data[i].name
-  //         })
-  //     }
-  // }
-
   componentDidMount() {
     fetch('/api/animals')
       .then(response => response.json())
@@ -30,24 +15,6 @@ class dogsForAdoption extends React.Component {
     console.log(this.state.animals);
     return (
       <>
-        <div className="dogFilter">
-          <label htmlFor="dogBreed">Type Dog Breed</label>
-          <input type="text" id="dogBreed" placeholder="Breed" />
-
-          <label htmlFor="dogAge">Age</label>
-          <select id="dogAge">
-            <option value="Baby">Baby</option>
-            <option value="Young">Young</option>
-            <option value="Adult">Adult</option>
-          </select>
-
-          <label htmlFor="dogGender">Gender</label>
-          <select id="dogGender">
-            <option value="Male">Male</option>
-            <option value="Female">Female</option>
-          </select>
-
-        </div>
         <div className="dogs">
           {this.state.animals.map(dog => {
             if (dog.photo) {
