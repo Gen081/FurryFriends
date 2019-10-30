@@ -31,14 +31,19 @@
 }
 
 .contactWrapper {
-    margin-top: 10vh;
+    width: 50vw;
+    margin: 10vh auto;
 }
 
-.formHeader {
-    display: flex;
-    justify-content: center;
-}
-
-#contactForm {
+.contactHeader {
     text-align: center;
+    margin-bottom: 3vh;
+}
+
+.message {
+    margin-top: 3vh;
+}
+
+.form-control:focus {
+    border-color: cornflowerblue;
 }
