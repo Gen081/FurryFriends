@@ -1,6 +1,7 @@
 import React from 'react';
 import ContactForm from '../components/ContactForm';
 import '../assets/stylesheets/showanimal.css'
+import Table from 'react-bootstrap/Table'
 
 class ShowAnimal extends React.Component {
   state = {
@@ -45,8 +46,12 @@ class ShowAnimal extends React.Component {
   render() {
     return (
       <>
+        <div>
+          <h1 className="dogName">{this.state.name}</h1>
+        </div>
         <div className="dogPicture">
           <img
+            className="imgDog"
             src={this.state.photo}
             alt=""
           >
@@ -54,20 +59,42 @@ class ShowAnimal extends React.Component {
         </div>
 
         <div className="dogInfoWrapper">
-          <ul className="dogInfoUl">
-            <li>{this.state.name}</li>
-            <li>{this.state.age}</li>
-            <li>{this.state.breed}</li>
-            <li>{this.state.color}</li>
-            <li>{this.state.size}</li>
-            <li>{this.state.gender}</li>
-            <li>{this.state.street_address}</li>
-            <li>{this.state.city}</li>
-            <li>{this.state.state}</li>
-            <li>{this.state.zip}</li>
-            <li>{this.state.email}</li>
-            <li>{this.state.phone}</li>
-          </ul>
+          <Table striped bordered hover className="table">
+            <tbody>
+              <tr>
+                <td>Name</td>
+                <td>{this.state.name}</td>
+              </tr>
+              <tr>
+                <td>Breed</td>
+                <td>{this.state.breed}</td>
+              </tr>
+              <tr>
+                <td>Color</td>
+                <td>{this.state.color}</td>
+              </tr>
+              <tr>
+                <td>Gender</td>
+                <td>{this.state.gender}</td>
+              </tr>
+              <tr>
+                <td>State</td>
+                <td>{this.state.city}</td>
+              </tr>
+              <tr>
+                <td>City</td>
+                <td>{this.state.city}</td>
+              </tr>
+              <tr>
+                <td>Zip</td>
+                <td>{this.state.zip}</td>
+              </tr>
+              <tr>
+                <td>Street</td>
+                <td>{this.state.street_address}</td>
+              </tr>
+            </tbody>
+          </Table>
         </div>
         <ContactForm />
       </>

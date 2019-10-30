@@ -1,8 +1,24 @@
+.dogName {
+    display: flex;
+    justify-content: center;
+    font-size: 3rem;
+    margin-top: 5vh;
+}
 
 .dogPicture {
     display: flex;
     justify-content: center;
-    margin-top: 10vh;
+    margin-top: 5vh;
+}
+
+.imgDog {
+    border: 1px solid #ccc;
+    border-radius: 10px;
+    transition: all 0.2s;
+}
+
+.imgDog:hover {
+    box-shadow: 0 0 11px rgba(33,33,33,.2); 
 }
 
 .dogInfoWrapper {
@@ -10,6 +26,6 @@
     margin: 0 auto;
 }
 
-.dogInfoUl {
-    color: black;
+.table {
+    margin-top: 5vh;
 }
