@@ -6,8 +6,8 @@ const ContactForm = (props) => {
 
   return (
     <div className="contactWrapper">
-      <h1 className="form-field header">Contact Me!</h1>
-      <form id='ContactForm' action="https://formspree.io/pierrelouisgenny@gmail.com" method="POST">
+      <h1 className="formHeader">Contact Me!</h1>
+      <form id='contactForm' action="https://formspree.io/pierrelouisgenny@gmail.com" method="POST">
         <div className="form-input">
           <label htmlFor="your-name">Your Name</label>
           <input

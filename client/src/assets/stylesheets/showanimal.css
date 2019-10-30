@@ -29,3 +29,16 @@
 .table {
     margin-top: 5vh;
 }
+
+.contactWrapper {
+    margin-top: 10vh;
+}
+
+.formHeader {
+    display: flex;
+    justify-content: center;
+}
+
+#contactForm {
+    text-align: center;
+}
