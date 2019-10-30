@@ -1,5 +1,7 @@
 import React from 'react';
 import ContactForm from '../components/ContactForm';
+import '../assets/stylesheets/showanimal.css'
+import Table from 'react-bootstrap/Table'
 
 class ShowAnimal extends React.Component {
   state = {
@@ -18,7 +20,7 @@ class ShowAnimal extends React.Component {
   };
 
   componentDidMount() {
-    console.log(this.props.match.params);
+    console.log(this.props);
     fetch(`/api/animals/${this.props.match.params.id}`)
       .then(response => response.json())
       //   .then(data => console.log(data));
@@ -43,27 +45,61 @@ class ShowAnimal extends React.Component {
 
   render() {
     return (
-      <div>
-        <div>{this.state.name}</div>
-        <div>{this.state.age}</div>
-        <div>{this.state.breed}</div>
-        <div>{this.state.color}</div>
-        <div>{this.state.size}</div>
-        <div>{this.state.gender}</div>
-        <div>{this.state.street_address}</div>
-        <div>{this.state.city}</div>
-        <div>{this.state.state}</div>
-        <div>{this.state.zip}</div>
-        <div>{this.state.email}</div>
-        <div>{this.state.phone}</div>
-        <div>{this.state.photo}</div>
+      <>
+        <div>
+          <h1 className="dogName">{this.state.name}</h1>
+        </div>
+        <div className="dogPicture">
+          <img
+            className="imgDog"
+            src={this.state.photo}
+            alt=""
+          >
+          </img>
+        </div>
 
+        <div className="dogInfoWrapper">
+          <Table striped bordered hover className="table">
+            <tbody>
+              <tr>
+                <td>Name</td>
+                <td>{this.state.name}</td>
+              </tr>
+              <tr>
+                <td>Breed</td>
+                <td>{this.state.breed}</td>
+              </tr>
+              <tr>
+                <td>Color</td>
+                <td>{this.state.color}</td>
+              </tr>
+              <tr>
+                <td>Gender</td>
+                <td>{this.state.gender}</td>
+              </tr>
+              <tr>
+                <td>State</td>
+                <td>{this.state.city}</td>
+              </tr>
+              <tr>
+                <td>City</td>
+                <td>{this.state.city}</td>
+              </tr>
+              <tr>
+                <td>Zip</td>
+                <td>{this.state.zip}</td>
+              </tr>
+              <tr>
+                <td>Street</td>
+                <td>{this.state.street_address}</td>
+              </tr>
+            </tbody>
+          </Table>
+        </div>
         <ContactForm />
-      </div>
-    );
+      </>
+    )
   }
 }
 
 export default ShowAnimal;
-
-// this.props.j
