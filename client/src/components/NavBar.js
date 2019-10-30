@@ -17,7 +17,7 @@ const Navbar = () => {
   <nav>
     <ul>
       <li><a href="./"><img className="paw" src={Paw} alt={"paw"}/></a></li>
-      <li><h1>FurryFriendFinder</h1></li>
+      <li className="web-name"><h1>FurryFriendFinder</h1></li>
       <li className="slogan">Adopt a Friendly Companion</li>
     </ul>
     <div className="btn" style= {{ backgroundImage: `url(${Peek})`, 
