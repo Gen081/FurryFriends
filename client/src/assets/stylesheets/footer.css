@@ -9,3 +9,26 @@ footer > ul {
     margin: 0;
     font-family: 'Unkempt', cursive;
 }
+
+i {
+ font-size: 30px;
+
+}
+
+a.social:hover {
+    transform: translateY(-2px);
+    
+  }
+
+  a.facebook {
+    color:     #0000CD;
+    padding-right: 10px;
+  }
+  
+ a.twitter{
+     padding-left: 10px;
+ }
+  
+  a.instagram {
+    color: white;
+  }
